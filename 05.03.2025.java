@@ -12,7 +12,7 @@ class Solution {
 /* using Equation */
 class Solution {
     public long coloredCells(long n) {
-        return ( 2*(n * (n - 1) / 2) + 1);
+        return ( 2*(n * (n - 1)) + 1);
     }
 }
 
