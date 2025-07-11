@@ -3,20 +3,20 @@ class Solution {
         /*itrate 0-lenth
         i>i+1-->+
         else - */
-        int total=0;
+        int tt=0;
         for(int i=0;i<s.length();i++){
             if(i+1<s.length()){
                 if(val(s.charAt(i))>=val(s.charAt(i+1))){
-                    total+=val(s.charAt(i));
+                    tt+=val(s.charAt(i));
                 }else{
-                    total=total+(val(s.charAt(i+1))-val(s.charAt(i)));
+                    tt=tt+(val(s.charAt(i+1))-val(s.charAt(i)));
                     i++;
                 }
             }else{
-                total+=val(s.charAt(i));
+                tt+=val(s.charAt(i));
             }
            }
-           return total;
+           return tt;
         }
     
    public int val(char c){
