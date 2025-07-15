@@ -6,11 +6,13 @@ class Solution {
     }
     public boolean isValid(String word) {
         int v=0,c=0,i;
-        for(i=0;i<word.length();i++){
-            char ch=word.charAt(i);
+        char arr[]=word.toCharArray();
+        for(i=0;i<arr.length;i++){
+            //char ch=word.charAt(i);
+            char ch=arr[i];
             if(ch>='0' && ch<='9')
                 continue;
-                if(ch=='@'|| ch=='#'||ch=='$')
+            if(ch=='@'|| ch=='#'||ch=='$')
                 return false;
             if(isvowel(ch))
                 v++;
