@@ -8,10 +8,10 @@ class Solution {
         int v=0,c=0,i;
         for(i=0;i<word.length();i++){
             char ch=word.charAt(i);
-            if(ch=='@'|| ch=='#'||ch=='$')
-                return false;
             if(ch>='0' && ch<='9')
                 continue;
+                if(ch=='@'|| ch=='#'||ch=='$')
+                return false;
             if(isvowel(ch))
                 v++;
             else
