@@ -6,8 +6,12 @@ class NumArray {
     
     public int sumRange(int left, int right) {
         int sum=0;
-        while(left<=right){
+        while(left<right){
             sum+=arr[left++];
+             sum+=arr[right--];
+        }
+        if(left == right){
+            sum+=arr[left];
         }
 
         return sum;
