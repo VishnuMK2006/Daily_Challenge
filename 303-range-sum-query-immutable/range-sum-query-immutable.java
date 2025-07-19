@@ -1,10 +1,13 @@
 class NumArray {
     int[] arr;
     public NumArray(int[] nums) {
-        arr=nums;
-        for(int i=1;i<nums.length;i++){
-            arr[i]=arr[i-1]+arr[i];
+        for(int i=1; i< nums.length; i++){
+            nums[i] += nums[i-1];
         }
+        arr=nums;
+        // for(int i=1;i<nums.length;i++){
+        //     arr[i]=arr[i-1]+arr[i];
+        // }
         
     }
     
