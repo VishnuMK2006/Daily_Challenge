@@ -19,7 +19,6 @@ class Solution {
                 g.setCharAt(res,'#');
             }
         }
-        System.out.println(s+"$"+g);
             return b+"A"+c+"B";
     }
 }
