@@ -1,19 +1,15 @@
 class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
-        int res[]=new int[nums.length];
-        int fre[]=new int[101];
-        //take the feq of the array
+        int feq[]=new int[101];
         for(int i=0;i<nums.length;i++){
-            fre[nums[i]]++;
+            feq[nums[i]]++;
         }
-        //make the prefix sum
         for(int i=1;i<101;i++){
-            fre[i]+=fre[i-1];
+            feq[i]+=feq[i-1];
         }
-        //res construct
         for(int i=0;i<nums.length;i++){
-            res[i]= nums[i]==0? 0:fre[nums[i]-1];
+            nums[i]=(nums[i]==0)? 0:feq[nums[i]-1];
         }
-        return res;
+        return nums;
     }
 }
