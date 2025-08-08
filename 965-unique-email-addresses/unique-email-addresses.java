@@ -5,8 +5,7 @@ class Solution {
         for(String s: emails){
             String str[]=s.split("@");
             str[0]=str[0].replace(".","");
-            int ind=str[0].length();
-             ind=str[0].indexOf("+");
+            int ind=str[0].indexOf("+");
             if(ind!=-1)
                hs.add(str[0].substring(0,ind)+"@"+str[1]);
             else
