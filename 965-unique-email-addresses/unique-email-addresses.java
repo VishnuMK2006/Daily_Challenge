@@ -7,9 +7,8 @@ class Solution {
             str[0]=str[0].replace(".","");
             int ind=str[0].indexOf("+");
             if(ind!=-1)
-               hs.add(str[0].substring(0,ind)+"@"+str[1]);
-            else
-                hs.add(str[0]+"@"+str[1]);
+              str[0]=str[0].substring(0,ind);
+            hs.add(str[0]+"@"+str[1]);
         }
         return hs.size();
     }
