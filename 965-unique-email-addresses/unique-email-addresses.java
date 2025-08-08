@@ -8,9 +8,7 @@ class Solution {
             int ind=str[0].length();
             if(str[0].contains("+"))
                 ind=str[0].indexOf("+");
-            str[0]=str[0].substring(0,ind);
-            String temp=str[0]+"@"+str[1];
-           hs.add(temp);
+           hs.add(str[0].substring(0,ind)+"@"+str[1]);
         }
         return hs.size();
     }
