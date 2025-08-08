@@ -1,14 +1,24 @@
 class Solution {
     public int numUniqueEmails(String[] emails) {
-        int i=0;
-        Set<String> hs=new HashSet<>();
-        for(String s: emails){
-            String str[]=s.split("@");
-            str[0]=str[0].replace(".","");
-            int ind=str[0].indexOf("+");
-            if(ind!=-1)
-              str[0]=str[0].substring(0,ind);
-            hs.add(str[0]+"@"+str[1]);
+         Set<String> hs = new HashSet<>();
+        for (String email : emails) {
+            StringBuilder local = new StringBuilder();
+            String domain = "";
+            boolean plusSeen = false;
+            boolean domainPart = false;
+
+            for (char c : email.toCharArray()) {
+                if (domainPart) {
+                    domain += c; // domain is short, fine to use +=
+                } else if (c == '@') {
+                    domainPart = true;
+                } else if (c == '+') {
+                    plusSeen = true;
+                } else if (!plusSeen && c != '.') {
+                    local.append(c);
+                }
+            }
+            hs.add(local + "@" + domain);
         }
         return hs.size();
     }
