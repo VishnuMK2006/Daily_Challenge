@@ -7,7 +7,7 @@ class Solution {
         int etr=s.charAt(4)-'0';
         for(char i = st;i<=ed;i++){
             for(int j=str;j<=etr;j++){
-                al.add(i+""+j);
+                al.add(""+i+j);
             }
         }
         return al;
