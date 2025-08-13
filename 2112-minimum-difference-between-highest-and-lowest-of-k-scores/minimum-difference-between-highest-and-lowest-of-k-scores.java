@@ -9,7 +9,7 @@ class Solution {
             int diff=nums[r]-nums[l];
             if(minDiff>diff)
                 minDiff=diff;
-            System.out.println(l+" "+r+" "+diff+" "+minDiff);
+            //System.out.println(l+" "+r+" "+diff+" "+minDiff);
             l++;r++;
             
         }
