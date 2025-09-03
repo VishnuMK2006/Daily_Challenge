@@ -12,8 +12,7 @@ class Solution {
             if(check)
                 arr[++i].append(s.charAt(ind));
             else
-               arr[--i].append(s.charAt(ind)); 
-
+               arr[--i].append(s.charAt(ind));
             if(i==j-1)
                 check=false;
             if(i==0)
