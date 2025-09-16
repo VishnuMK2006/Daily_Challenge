@@ -4,13 +4,13 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             if(count==0){
                 maj=nums[i];
-                count++;
+                // count++;
                 }
-            else if(maj==nums[i]){
+            if(maj==nums[i])
                 count++;
-            }else if(maj!=nums[i]){
+            else
                 count--;
-            }
+            
         }
         return maj;
     }
